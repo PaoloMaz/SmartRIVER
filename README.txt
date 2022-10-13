@@ -9,7 +9,7 @@ The notebook is provided under Creative Commons CC BY-NC-SA license (https://cre
 This self explaining commented notebook (paired with an example  .csv dataset) has been shared as Jupyter notebook (for Google Colab). 
 The user is guided, step by step, to perform forecast from a time serie of discharge (TARGET variable)  and a few input features (Vx)
 
-Main steps encoded in the notebook are.
+Main steps encoded in the notebook are:
 
 DATA READ AND PREPARATION – loading the dataset with target and input features, performing basic operations such as filling missing values, normalizing the variables, dealing with the time information.
 FEATURE DROP to remove uninformative features from database.
