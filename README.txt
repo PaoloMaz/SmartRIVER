@@ -1,4 +1,4 @@
-SmartRIVER forecats system
+SmartRIVER forecast system
 notebook created by GECOsistema Srl - Piazza Maltesta 21 Rimini (Italy) mail : home@gecosistema.it
 
 DISCLAIMER: This notebook and related sample data are provided "as they are" only for demonstrational purposes, without warranty of any kind, either express or implied. The user is the sole responsible for any use of this notebook and GECOsistema will not be liable for any damages that the user may suffer in connection with using, modifying or distributing any part of this notebook.
