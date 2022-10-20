@@ -11,7 +11,7 @@ Main steps encoded in the notebook are:
 - LOAD MODELS to load a saved model and run it over a test dataset
 
 
-Example datasets: 
+Example datasets:   
 Discharge.csv 2 weeks dataset (default dataset for the notebook ) 
 Dis = target variable ,  discharge in the next 14 days (m3/s) 
 V1 = discharge in the antecedent 7 days (m3/s) 
