@@ -12,7 +12,7 @@ Main steps encoded in the notebook are:
 
 
 Example datasets:   
-Discharge.csv 2 weeks dataset (default dataset for the notebook ) 
+Discharge.csv   2 weeks dataset (default dataset for the notebook ) 
 Dis = target variable ,  discharge in the next 14 days (m3/s) 
 V1 = discharge in the antecedent 7 days (m3/s) 
 V2 = precipitation in the antecedent 14 days [mm]
@@ -20,7 +20,7 @@ V3 = air temperature station 1 antecedent 3 days [°C]
 V4 = relative humidity  station 1 in the antecedent 14 days [% 0-100]
 V5 = ECMMWF precipitation forecast for the incoming 15 days the day before prediction day [kg m-2]
 
-Discharge_m.csv 1 month  dataset
+Discharge_m.csv   1 month  dataset
 Dis = target variable ,  discharge in the next 14 days (m3/s) 
 V1 = discharge in the antecedent 1 month (m3/s)
 V11= discharge in the incoming  month - climatic average of the past 5 years (m3/s)
@@ -29,7 +29,7 @@ V3 = air temperature station 1 antecedent 1 month [°C]
 V4 = relative humidity  station 1 in the antecedent 1 month [% 0-100]
 V5 = ECMMWF precipitation forecast for the incoming 15 days the day before prediction day [kg m-2]
 
-daily_master dataset.csv
+daily_master dataset.csv  
 daily dataset of the target and input variables as retrieved 
 Qin = observed incoming dicharge  (m3/s) 
 P1 = precipitation statin 1   [mm]
