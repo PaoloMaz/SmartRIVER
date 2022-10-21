@@ -1,11 +1,8 @@
  """
  This code provides a set of functions used to :
- - Periodically retrieve one feature set from public ECMWF datasets
- - Get an avegare value of the feature over a specific area passed in shape file format (e.g. a river basin) 
- - Periodically accesss an ftp repository with local data
- 
- to integrate the provided functions in spcific workflow 
- 
+ - retrieve one feature set from public ECMWF datasets
+ - get an avegare value of the feature over a specific area passed in shape file format (e.g. a river basin) 
+ - access an ftp repository with local data
  
  It has been developed in the 1st Open Call of I-NERGY (https://www.ai4europe.eu/ai-community/projects/i-nergy)
  (This project has received funding from the European Union's Horizon 2020 research and innovation
