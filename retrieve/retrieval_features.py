@@ -1,5 +1,15 @@
  """
- import required packages 
+ This code provides a set of functions used to :
+ - Periodically retrieve one feature set from public ECMWF datasets
+ - Get an avegare value of the feature over a specific area passed in shape file format (e.g. a river basin) 
+ - Periodically accesss an ftp repository with local data
+ 
+ to integrate the provided functions in spcific workflow 
+ 
+ 
+ It has been developed in the 1st Open Call of I-NERGY (https://www.ai4europe.eu/ai-community/projects/i-nergy)
+ (This project has received funding from the European Union's Horizon 2020 research and innovation
+ programme within the framework of the I-NERGY Project, funded under grant agreement No 101016508)
   
  """
 
@@ -13,9 +23,11 @@ import re
 
 def downloadFromEcmwf(bdate=None, edate=None):
     """
-    downloadFromEcmwf - This procedure acquire a Param (Total Precipitation)
+    downloadFromEcmwf - This procedure acquires a Parameter (Total Precipitation)
     from ECMWF saving it on a netcdf files
     
+    refer to  https://confluence.ecmwf.int/display/WEBAPI/Access+ECMWF+Public+Datasets
+    for adapting to other parameters and available public datasets
     """
     steps =  [360] #number of forecast hours
     steps = "/".join(["%d"%item for item in steps])
@@ -45,7 +57,7 @@ def downloadFromEcmwf(bdate=None, edate=None):
                 "target": filenc,
             })
         except Exception as ex:
-            text = "Download giornaliero del TIGGE per la variabile Ecmwf_tigge_P15 fallito causa:<%s>"%(ex)
+            text = "daily TIGGE  download for 15 days Precipitation forecast failed because of :<%s>"%(ex)
             print(text)
             return False
     return True       
@@ -54,8 +66,9 @@ def downloadFromEcmwf(bdate=None, edate=None):
 def averageOnArea(varname, filenc, fileshp):
     """
     averageOnArea - 
-    This procedure interpolate data from ECMWF and average the param "varname"
-    just on the basin defined in fileshp
+    This procedure interpolates data from ECMWF and average the param "varname"
+    just over a specific area, e.g. a river basin,  provided as shapefile "fileshp"
+    
     """
     ds    = ogr.Open(fileshp)
     layer = ds.GetLayer()
@@ -113,8 +126,9 @@ def averageOnArea(varname, filenc, fileshp):
 
 def downloadFromFtp(fileconf):
     """
-    This procedure download features from ftp 
-    fileconf - file with credentials and ftp cofiguration
+    This procedure retrieves features from an ftp repository
+    fileconf contains file with  required credentials and ftp configuration
+    
     """
     res = False
     ftp = FtpClient(fileconf)
